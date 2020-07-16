@@ -1,0 +1,120 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.carousel-item{
+	height: 350px;
+	overflow:hidden;
+	background: no-repeat;
+}
+
+
+.navbar-brand img{
+/* 	height: 250px; */
+	border-radius: 30px;
+}
+.navbar-brand img{
+	height: 80px;
+	width: 150px;
+}
+#nombre li{
+	margin-top: 1.5em;
+}
+.card img-top{
+	width: 150px;
+	height: 40px;
+}
+
+.carousel-item{
+/* 	height: 500px; */
+}
+.pestanas{
+  margin-top: 5em;
+}
+.carousel-item img{
+	height: 500px;
+}
+.price{
+	float: right;
+}
+.card-img-tomate img{
+	width: 550px;
+	height: 300px;
+}
+.card-img-naranja img{
+	width: 550px;
+	height: 320px;
+}
+.ProductoDestacado img{
+	height: 300px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.fa-star{
+	background-color: yellow;
+
+}
+li> i{
+	color: orange;
+}
+
+
+
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.btn-circle {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.btn-circle i {
+  position: relative;
+  top: -1px;
+}
+
+.btn-circle-sm {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 0.9rem;
+}
+
+.btn-circle-lg {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 1.1rem;
+}
+
+.btn-circle-xl {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.3rem;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+  background: #f8f8fd;
+  color: #514B64;
+  min-height: 100vh;
+}

@@ -1,0 +1,57 @@
+{
+	"menu": [{
+			"name": "img/logo.png",
+			"link": "index.html",
+			"sub": null
+		},
+		{
+			"name": "Inicio",
+			"link": "index.html",
+			"sub": null
+		},
+
+		{
+			"name": "Productos",
+			"link": "productos.html",
+			"sub":
+
+				[{
+						"name": "Frutas",
+						"link": "frutas.html",
+						"sub": null
+					},
+					{
+						"name": "Verduras",
+						"link": "verduras.html",
+						"sub": null
+					}
+				]
+		}, {
+			"name": "Servicios",
+			"link": "servicios.html",
+			"sub":
+
+				[{
+						"name": "Reparto a Domicilio",
+						"link": "reparto.html",
+						"sub": null
+					},
+					{
+						"name": "Cestas y Arreglo Frutales",
+						"link": "cestas-arreglos-frutales.html",
+						"sub": null
+					}
+				]
+		}, {
+			"name": "Ubicacion",
+			"link": "ubicacion.html",
+			"sub": null
+		},
+		{
+			"name": "Contacto",
+			"link": "contacto.html",
+			"sub": null
+		}
+	]
+
+}
