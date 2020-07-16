@@ -1,3 +1,21 @@
+<?php 
+	session_start();
+		if(isset($_POST)){
+		$usuario = $_POST['usuario'];
+		$password = $_POST['password'];
+
+		if ($usuario == "prueba" && $password == "prueba1") {
+			$_SESSION["logedin"] = true;
+			$_SESSION["usuario"] = $usuario;
+			$_SESSION["rol"] = "admin";
+		}
+
+	} 
+
+
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

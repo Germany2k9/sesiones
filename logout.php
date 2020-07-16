@@ -1,3 +1,14 @@
+<?php 
+//inicia una nueva session o reanuda la existente.
+	session_start();
+//Destruye toda la informacion registrada de la session.
+	session_destroy();
+//Redirecciona a la pagona de login.
+	header('Location: login.php');	
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,17 @@
+<?php 
+session_start();
+	if (!isset($_SESSION['loggedin'])) {
+		# code...
+		header('Location:login.php');
+	}
+
+	if ($_SESSION['rol']=="admin") {
+		# code...
+	}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +27,12 @@
 </head>
 <body>
   
-
+	<div class="conatainer">
+	<h1>Admin</h1>	
+	 Area Privada <?php $_SESSION['rol'] ; ?>
+	 <a href="logout.php"> Salir </a>
+	
+	</div>
   
 
 	 <script src="js/jquery-3.4.1.min.js"></script>
