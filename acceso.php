@@ -4,13 +4,58 @@
 		$usuario = $_POST['usuario'];
 		$password = $_POST['password'];
 
-		if ($usuario == "prueba" && $password == "prueba1") {
-			$_SESSION["logedin"] = true;
-			$_SESSION["usuario"] = $usuario;
-			$_SESSION["rol"] = "admin";
-		}
+		// if ($usuario == "prueba" && $password == "prueba1") {
+		// 	$_SESSION["logedin"] = true;
+		// 	$_SESSION["usuario"] = $usuario;
+		// 	$_SESSION["rol"] = "admin";
+		// }
 
-	} 
+	 
+	//Preparo las variables con los datos de conexion 
+	$host="localhost";
+	$usuario ="root";
+	$clave ="";
+	$db="usuarios";
+	
+	//conectarse a la base de datos
+	$conn= mysql_connect($host, $usuario, $clave, $db);
+
+	//preparo la sentencia con los comeodines ?
+	$sql="SELECT user, rol FROM usuarios WHERE user=? AND password =? ";
+
+	//preparo la consulta
+	$pre= mysqli_prepare($conn, $sql);
+
+	//incdico los datos a remplazar con su tipo.
+	msqli_stmt_bind_param($pre,"ss", $usuario, $password);
+
+	//Ejecuto la consulta.
+	mysqli_stmt_execute($pre);
+	//Asocio los nombre s de campo a nombres de variables.
+	mysqli_stmt_bind_result($pre, $user, $rol);
+	
+	#capturo los resultados y los guardo en un array.
+	$registros[]=null;
+	while (mysqli_stmt_fecth($pre)) {
+		$registros[] = array(
+			'user'=>$id,
+			'rol'=>$rol,
+		);
+	}
+
+
+	if($registros != null){
+		$_SESSION['loggedin']=true;
+		$_SESSION['rol']=$rol;
+
+		header('Location: index.php');
+
+	}
+	#cierro la consulta y la conexion.
+	mysqli_stmt_close($pre);
+	mysqli_close($conn);
+
+}
 
 
 
